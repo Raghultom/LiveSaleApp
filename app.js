@@ -5,6 +5,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import CartScreen from './src/screens/CartScreen';
 import ContactScreen from './src/screens/ContactScreen';
 import LoginScreen from './src/screens/LoginScreen';
+import SignupScreen from './src/screens/SignupScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +38,14 @@ const App = () => {
             headerTitleStyle: { textTransform: 'none' },
           }}
         />
+         <Stack.Screen
+          name="Signup"
+          component={SignupScreen}
+          options={{
+            title: 'Fifth page Signup',
+            headerTitleStyle: { textTransform: 'none' },
+          }}
+        />        
       </Stack.Navigator>
 
     </NavigationContainer>

@@ -1,65 +1,65 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
+  const buttons = [
+    { title: 'Go to Cart', screen: 'Cart' },
+    { title: 'Go to Contact', screen: 'Contact' },
+    { title: 'Login Page', screen: 'Login' },
+    { title: 'SignupPage', screen: 'Signup' },
+
+    // Add more buttons here if needed
+  ];
+
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.scrollContainer}>
       <Text style={styles.title}>🎉 Welcome to Live Sale 🎉</Text>
 
-      <View style={styles.buttonRow}>
-        <View style={styles.buttonWrapper}>
-          <Button
-            title="Go to Cart"
-            onPress={() => navigation.navigate('Cart')}
-            color="#007bff"
-          />
-        </View>
-
-        <View style={styles.buttonWrapper}>
-          <Button
-            title="Go to Contact"
-            onPress={() => navigation.navigate('Contact')}
-            color="#007bff"
-          />
-        </View>
-        <View style={styles.buttonWrapper}>
-          <Button
-            title="Login Page"
-            onPress={() => navigation.navigate('Login')}
-            color="#007bff"
-          />
-        </View>
-      </View>
-    </View>
+      {buttons.map((btn, index) => (
+        <TouchableOpacity
+          key={index}
+          style={styles.button}
+          onPress={() => navigation.navigate(btn.screen)}
+        >
+          <Text style={styles.buttonText}>{btn.title}</Text>
+        </TouchableOpacity>
+      ))}
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fefefe',
-    justifyContent: 'center',
-    alignItems: 'center',
+  scrollContainer: {
     padding: 20,
+    paddingTop: 60,
+    alignItems: 'flex-start',
+    backgroundColor: '#fefefe',
+    minHeight: '100%',
   },
   title: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: 'bold',
     color: '#333',
-    textAlign: 'center',
     marginBottom: 30,
   },
-  buttonRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    gap: 10,
-
+  button: {
+    backgroundColor: '#007bff',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    marginBottom: 15,
+    width: '80%',
   },
-  buttonWrapper: {
-    marginHorizontal: 5,
-    width: 120,
-    paddingLeft: 15,
-    paddingRight: 15,
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
   },
 });
 
