@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "654309351854",
+    "project_id": "login-671cf",
+    "storage_bucket": "login-671cf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654309351854:android:7ff89c58cd6be6fa0e283f",
+        "android_client_info": {
+          "package_name": "com.livesaleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654309351854-thcv104e3la3ve7gadi9uprs5cdii6h0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.livesaleapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "654309351854-i79u4l662jlnth9atp909etqu39a3fd3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0V23HDmcAygRHlM8YWlq4qEyXwEAexTo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654309351854-i79u4l662jlnth9atp909etqu39a3fd3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
